@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // When clicked, show a toast with the TextView text
+                // When clicked to each of the item list, show toast message
                 Toast.makeText(getApplicationContext(), parent.getItemAtPosition(position).toString(),
                         Toast.LENGTH_SHORT).show();
             }
