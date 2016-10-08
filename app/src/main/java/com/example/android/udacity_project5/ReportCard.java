@@ -7,38 +7,61 @@ package com.example.android.udacity_project5;
 public class ReportCard {
 
     // Icons of Students
-    private int mImageIcon;
+    private int ImageIcon;
     // Students Name
-    private String mStudentName;
+    private String StudentName;
     // Students Subject
-    private String mStudentSubject;
+    private String StudentSubject;
     // Students grade
-    private String mStudentsGrade;
+    private String StudentsGrade;
 
-    public ReportCard(int imageIcon, String studentName, String studentSubject, String studentGrade) {
-        mImageIcon = imageIcon;
-        mStudentName = studentName;
-        mStudentSubject = studentSubject;
-        mStudentsGrade = studentGrade;
+
+    public int getImageIcon() {
+        return ImageIcon;
     }
 
-    // Get Resource image
-    public int getmImageIcon() {
-        return mImageIcon;
+    public void setImageIcon(int imageIcon) {
+        ImageIcon = imageIcon;
     }
 
-    // Get Student Name
-    public String getmStudentName() {
-        return mStudentName;
+    public String getStudentName() {
+        return StudentName;
     }
 
-    //Get Student Report Card
-    public String getmStudentSubject() {
-        return mStudentSubject;
+    public void setStudentName(String studentName) {
+        StudentName = studentName;
     }
 
-    //Get Student Grade
-    public String getmStudentsGrade() {
-        return mStudentsGrade;
+    public String getStudentSubject() {
+        return StudentSubject;
+    }
+
+    public void setStudentSubject(String studentSubject) {
+        StudentSubject = studentSubject;
+    }
+
+    public String getStudentsGrade() {
+        return StudentsGrade;
+    }
+
+    public void setStudentsGrade(String studentsGrade) {
+        StudentsGrade = studentsGrade;
+    }
+
+    public ReportCard(int imageIcon, String studentName, String studentSubject, String studentsGrade) {
+        ImageIcon = imageIcon;
+        StudentName = studentName;
+        StudentSubject = studentSubject;
+        StudentsGrade = studentsGrade;
+    }
+
+    @Override
+    public String toString() {
+        return "ReportCard{" +
+                "ImageIcon=" + ImageIcon +
+                ", StudentName='" + StudentName + '\'' +
+                ", StudentSubject='" + StudentSubject + '\'' +
+                ", StudentsGrade='" + StudentsGrade + '\'' +
+                '}';
     }
 }

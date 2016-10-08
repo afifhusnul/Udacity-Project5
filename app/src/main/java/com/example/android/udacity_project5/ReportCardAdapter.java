@@ -40,22 +40,22 @@ public class ReportCardAdapter extends ArrayAdapter<ReportCard> {
         // Find the ImageView in the list_item.xml layout with the ID list_item_icon
         ImageView iconView = (ImageView) listItemView.findViewById(R.id.list_item_icon);
         // set the image to iconView
-        iconView.setImageResource(currentReportCard.getmImageIcon());
+        iconView.setImageResource(currentReportCard.getImageIcon());
 
         // Find the TextView in the list_item.xml layout with the ID student_name
         TextView nameTextView = (TextView) listItemView.findViewById(R.id.student_name);
         // set this text on the subject TextView
-        nameTextView.setText(currentReportCard.getmStudentName());
+        nameTextView.setText(currentReportCard.getStudentName());
 
         // Find the TextView in the list_item.xml layout with the ID student_subject
         TextView subjectTextView = (TextView) listItemView.findViewById(R.id.student_subject);
         // set this text on the subject TextView
-        subjectTextView.setText(currentReportCard.getmStudentSubject());
+        subjectTextView.setText(currentReportCard.getStudentSubject());
 
         // Find the TextView in the list_item.xml layout with the ID student_grade
         TextView numberTextView = (TextView) listItemView.findViewById(R.id.student_grade);
         // set this text on the grade TextView
-        numberTextView.setText(currentReportCard.getmStudentsGrade());
+        numberTextView.setText(currentReportCard.getStudentsGrade());
 
         // Return the whole list item layout (containing 3 TextViews and an ImageView)
         // so that it can be shown in the ListView

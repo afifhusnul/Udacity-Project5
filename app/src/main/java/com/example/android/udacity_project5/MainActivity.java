@@ -2,7 +2,10 @@ package com.example.android.udacity_project5;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -33,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
         // Get a reference to the ListView, and attach the adapter to the listView.
         ListView listView = (ListView) findViewById(R.id.list_report);
         listView.setAdapter(reportCardAdapter);
+        listView.setTextFilterEnabled(true);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // When clicked, show a toast with the TextView text
+                Toast.makeText(getApplicationContext(), parent.getItemAtPosition(position).toString(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 }
